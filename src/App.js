@@ -85,8 +85,16 @@ class Weather extends React.Component {
 
   async doCity(event) {
     let values = document.getElementById("cityName").value.split(",");
-    if (values.length != 2) {
-      alert("Location not found: Enter city name plus a comma followed by country name, such as: New York, usa or Vancouver, canada");
+    if (values.length != 2 || values[1].trim() == '') {
+      alert("Incorrect format: Enter city name plus a comma followed by country name, such as: New York, usa or Vancouver, canada");
+      this.setState({
+        latitude: this.state.latitude,
+        longitude: this.state.longitude,
+        data: this.state.data,
+        input: "",
+        weatherResults: this.state.weatherResults
+      });
+      return;
     }
     let city = values[0];
     let country = values[1];
@@ -100,8 +108,15 @@ class Weather extends React.Component {
     let api_call = await fetch(api_link);
     let api_result = await api_call.json();
 
-    if (!api_result.Search) {
+    if (!api_result.name) {
       alert("Location not found: Enter city name plus a comma followed by country name, such as: New York, usa or Vancouver, canada");
+      this.setState({
+        latitude: this.state.latitude,
+        longitude: this.state.longitude,
+        data: api_result,
+        input: "",
+        weatherResults: this.state.weatherResults
+      });
       return;
     }
 
