@@ -1,0 +1,48 @@
+@media (min-width: 800px) {
+  #results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0px;
+    width: 70vw;
+    height: 50vw;
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: auto;
+    color: red;
+  }
+}
+
+@media (max-width: 799px) {
+  #weatherBox {
+    width: 25vw;
+    height: 45vw;
+    font-size: 2vw;
+  }
+
+  #results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0px;
+    width: 55vw;
+    height: 50vw;
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: auto;
+    color: red;
+  }
+}
+
+body {
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  margin: 0px;
+}
+
+#cityName {
+  width: 250px;
+}
+
+#weatherBoxName {
+  color: black;
+}
