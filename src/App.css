@@ -6,7 +6,7 @@
     width: 70vw;
     height: 50vw;
     margin: auto;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: auto;
     color: red;
   }
@@ -26,7 +26,7 @@
     width: 55vw;
     height: 50vw;
     margin: auto;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: auto;
     color: red;
   }
@@ -37,16 +37,31 @@ body {
   color: white;
   text-align: center;
   margin: 0px;
+  font-family: "Julius Sans One", cursive;
 }
 
 #cityName {
   width: 250px;
+  border-radius: 5px;
 }
 
 #longitudeLatitude {
   width: 250px;
+  border-radius: 5px;
 }
 
 #weatherBoxName {
   color: black;
+}
+
+#zipCode {
+  border-radius: 5px;
+  width: 250px;
+}
+
+button {
+  border-radius: 5px;
+  margin-left: 2vw;
+  background: black;
+  color: wheat;
 }
