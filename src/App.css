@@ -43,6 +43,10 @@ body {
   width: 250px;
 }
 
+#longitudeLatitude {
+  width: 250px;
+}
+
 #weatherBoxName {
   color: black;
 }
